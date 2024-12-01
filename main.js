@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const phoneNumber = '6281400796283'; // Contoh: kode negara + nomor HP tanpa tanda +
             
             // Pesan default
-            const message = 'Hai sayangku, aku harap kamu suka surprise-nya ❤️🥰';
+            const message = 'Hai sayangku, selamat kamu kena prank hahaha maaf ya sayanggku ❤️🥰';
             
             // Buka WhatsApp Web atau Aplikasi
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
