@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+body {
+    font-family: 'bold', sans-serif;
+    background-color: #FFFFD0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: purple;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.airplane {
+    position: fixed;
+    top: -50px;
+    left: -50px;
+    font-size: 50px;
+    transition: all 3s ease;
+    z-index: 1000;
+}
+
+.falling-emoji {
+    position: fixed;
+    font-size: 30px;
+    animation: fall 3s linear;
+    z-index: 999;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+
+.memory-item {
+    background-color: #ff69b4;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#playMusic {
+    margin-top: 20px;
+    background-color: #ff1493;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.love-letter {
+    background-color: #fff0f5;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.love-letter p {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: justify;
+    letter-spacing: 0.5px;
+}
+
+.love-letter p:first-child {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ff1493;
+    margin-bottom: 25px;
+}
+
+.signature {
+    text-align: right;
+    font-style: italic;
+    color: #ff69b4;
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+/* Efek hover pada paragraf */
+.love-letter p:hover {
+    color: #ff1493;
+    transition: color 0.3s ease;
+}
+
+.play-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+.play-btn {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.play-btn:hover {
+    background-color: #ff1493;
+    transform: scale(1.05);
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.play-btn.blink {
+    animation: blink 1s infinite;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    background-color: #fff0f5;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.photo-container {
+    flex: 0 0 250px; /* Lebar foto */
+}
+
+.profile-photo {
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .photo-container {
+        margin-bottom: 20px;
+    }
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    background: linear-gradient(45deg, 
+        #ff1493, 
+        #ff69b4, 
+        #ff00ff, 
+        #da70d6, 
+        #ff1493
+    );
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: 
+        gradientAnimation 5s ease infinite,
+        textShake 0.5s infinite alternate;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes textShake {
+    0% {
+        transform: translateX(-1px) rotate(-1deg);
+    }
+    100% {
+        transform: translateX(1px) rotate(1deg);
+    }
+}
+
+/* Tambahan efek hover */
+h1:hover {
+    animation-play-state: paused;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#bagusGaBtn {
+    background-color: #25D366; /* Warna hijau WhatsApp */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#bagusGaBtn:hover {
+    background-color: #128C7E;
+    transform: scale(1.05);
+}
+
+#bagusGaBtn::before {
+    content: '💕';
+    margin-right: 8px;
+}
+
+#bagusGaBtn::after {
+    content: '💕';
+    margin-left: 8px;
+}
+
